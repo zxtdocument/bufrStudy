@@ -25,9 +25,9 @@ program a
     read(unit_intxt,'(I14)') endT
     read(unit_intxt,'(A1024)') inName
  
-    call system('cp -rf '//inName//' '//outName)
+!    call system('cp -rf '//inName//' '//outName)
 
-    open(unit_out,file=outName,status='old',form='unformatted')
+    open(unit_out,file=outName,status='new',form='unformatted')
     open(unit_in,file=inName,action='read',form='unformatted')
     open(unit_table,file='table.txt')
     call openbf(unit_in,'IN',unit_in)

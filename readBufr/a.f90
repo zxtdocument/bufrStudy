@@ -20,7 +20,7 @@ program a
         msg_report: do while (ireadmg(unit_in,subset,idate)==0)
             num_message=num_message+1
             num_subset=0
-!            write(*,'(I10,I4,a10)') idate,num_message,subset
+            write(*,'(I10,I4,a10)') idate,num_message,subset
             sb_report: do while (ireadsb(unit_in)==0)
                 num_subset=num_subset+1
                 call ufbint(unit_in,data1,6,1,iret,datastr1)
@@ -29,11 +29,11 @@ program a
                 call ufbrep(unit_in,data4,3,15,iret,datastr4)
 
                 write(*,'(2I8,6f20.5)') num_subset,iret,data1
-!                write(*,'(2I8,6f20.5)') num_subset,iret,data2
-!                write(*,'(2I8,4f20.5)') num_subset,iret,data3
+                write(*,'(2I8,6f20.5)') num_subset,iret,data2
+                write(*,'(2I8,4f20.5)') num_subset,iret,data3
 
                 do i=1,15,1
-!                    write(*,'(2I8,3f20.5)') num_subset,iret,data4(1:3,i)
+                    write(*,'(2I8,3f20.5)') num_subset,iret,data4(1:3,i)
                 enddo
 
             enddo sb_report
