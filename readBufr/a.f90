@@ -12,7 +12,7 @@ program a
     integer::unit_in=10,i
     integer::idate,iret,num_message,num_subset
 
-    open(unit_in,file='bufr2',action='read',form='unformatted')
+    open(unit_in,file='fort.52',action='read',form='unformatted')
     call openbf(unit_in,'IN',unit_in)
     call datelen(10)
 
